@@ -105,7 +105,7 @@ labels_placeholder = tf.placeholder(tf.int32, [None])
 dropout_placeholdr = tf.placeholder(tf.float32)
 ```
 
-## 定义卷基网络（卷积和Pooling部分）
+## 定义卷积网络（卷积和Pooling部分）
 ```python
 # 定义卷积层, 20个卷积核, 卷积核大小为5，用Relu激活
 conv0 = tf.layers.conv2d(datas_placeholder, 20, 5, activation=tf.nn.relu)
