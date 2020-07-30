@@ -5,7 +5,8 @@ import os
 from PIL import Image
 #矩阵运算库
 import numpy as np
-import tensorflow as tf
+import tensorflow.compat.v1 as tf
+tf.disable_v2_behavior()
 
 
 # 数据文件夹
@@ -134,6 +135,9 @@ with tf.Session() as sess:
             real_label_name = label_name_dict[real_label]
             predicted_label_name = label_name_dict[predicted_label]
             print("{}\t{} => {}".format(fpath, real_label_name, predicted_label_name))
+
+
+            
 
 
 
